@@ -14,16 +14,17 @@ public class Exercises2
     You can return the answer in any order.
     */
 
-    public int[] twoSum(int[] nums, int target) 
+	public int[] twoSum(int[] nums, int target) 
     {
-    	int[2] answers;
+    	int[] answers = {0, 0};
     	for (int i = 0; i < nums.length-1; i++)
     	{
     		for (int k = i+1; k < nums.length; k++)
     		{
     			if (nums[i] + nums[k] == target)
     			{
-    				answer = {i, k};
+    				answers[0] = i;
+    				answers[1] = k;
     				break;
     			}
     		}
@@ -62,10 +63,108 @@ public class Exercises2
     Given a roman numeral, convert it to an integer.
     */
 
-    public int romanToInt(String s) 
+    public int romanToInt(String str) 
     {
         // TODO
-        return 0;
+    	int answer = 0;
+    	for (int i = 0; i < str.length(); i++)
+    	{
+    		if (str.charAt(i) == 'I')////////////////////////////////////////////////////////////////
+    		{
+    			if (i < str.length()-1)
+    			{
+    				if (str.charAt(i+1) == 'V')
+    				{
+    					answer = answer + 4;
+    					i++;
+    					continue;
+    				}
+    				else if (str.charAt(i+1) == 'X')
+    				{
+    					answer = answer + 9;
+    					i++;
+    					continue;
+    				}
+    				else
+    				{
+    				    answer = answer + 1;
+    				}
+    			}
+    			else
+    			{
+    				answer = answer + 1;
+    			}
+    		}
+    		else if (str.charAt(i) == 'V')////////////////////////////////////////////////////////////////
+    		{
+    			answer = answer + 5;
+    		}
+    		else if (str.charAt(i) == 'X')////////////////////////////////////////////////////////////////
+    		{
+    			if (i < str.length()-1)
+    			{
+    				if (str.charAt(i+1) == 'L')
+    				{
+    					answer = answer + 40;
+    					i++;
+    					continue;
+    				}
+    				else if (str.charAt(i+1) == 'C')
+    				{
+    					answer = answer + 90;
+    					i++;
+    					continue;
+    				}
+    				else
+        			{
+        				answer = answer + 10;
+        			}
+    			}
+    			else
+    			{
+    				answer = answer + 10;
+    			}
+    		}
+    		else if (str.charAt(i) == 'L')////////////////////////////////////////////////////////////////
+    		{
+    			answer = answer + 50;
+    		}
+    		else if (str.charAt(i) == 'C')////////////////////////////////////////////////////////////////
+    		{
+    			if (i < str.length()-1)
+    			{
+    				if (str.charAt(i+1) == 'D')
+    				{
+    					answer = answer + 400;
+    					i++;
+    					continue;
+    				}
+    				else if (str.charAt(i+1) == 'M')
+    				{
+    					answer = answer + 900;
+    					i++;
+    					continue;
+    				}
+    			    else
+        			{
+        				answer = answer + 100;
+        			}
+    			}
+    			else
+    			{
+    				answer = answer + 100;
+    			}
+    		}
+    		else if (str.charAt(i) == 'D')////////////////////////////////////////////////////////////////
+    		{
+    			answer = answer + 500;
+    		}
+    		else if (str.charAt(i) == 'M')////////////////////////////////////////////////////////////////
+    		{
+    			answer = answer + 1000;
+    		}
+    	}
+        return answer;
     }
 
     /*
