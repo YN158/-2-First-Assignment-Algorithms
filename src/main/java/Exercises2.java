@@ -3,7 +3,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Exercises2 {
+public class Exercises2 
+{
 
     /*
     Given an array of integers nums and an integer target, return indices of the two numbers
@@ -13,7 +14,8 @@ public class Exercises2 {
     You can return the answer in any order.
     */
 
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) 
+    {
         // TODO
         return null;
     }
@@ -48,7 +50,8 @@ public class Exercises2 {
     Given a roman numeral, convert it to an integer.
     */
 
-    public int romanToInt(String s) {
+    public int romanToInt(String s) 
+    {
         // TODO
         return 0;
     }
@@ -58,12 +61,14 @@ public class Exercises2 {
     You can return the answer in any order.
     */
 
-    public List<List<Integer>> permute(int[] nums) {
+    public List<List<Integer>> permute(int[] nums) 
+    {
         // TODO
         return null;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         // test your code here!
     }
 }
